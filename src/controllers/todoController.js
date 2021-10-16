@@ -25,7 +25,7 @@ exports.add = async (req, res) => {
     console.log("Add");
 
     try {
-        const createdTodo = await TodoService.addTodo(req.body);
+        const createdTodo = await todoService.addTodo(req.body);
         res.status(201).json(createdTodo);
     } catch (err) {
         res.status(500).json({"error": err})
